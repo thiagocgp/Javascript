@@ -1,0 +1,31 @@
+<!--
+Ex1
+Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela.
+-->
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <div id='app'>
+            <button id='botao'>Novo Quadrado</button>
+            <div id='containerQuadrados'></div>
+        </div>
+
+        <script>
+           var btnElement = document.getElementById('botao');
+           var containerElement = document.getElementById('containerQuadrados');
+           btnElement.onclick = function(){
+                var quadrado = document.createElement('div');
+                quadrado.setAttribute('class', 'box');
+                quadrado.style.width = 100;
+                quadrado.style.height = 100;
+                quadrado.style.marginBottom = 10;
+                quadrado.style.backgroundColor = '#f00';
+                containerElement.appendChild(quadrado);
+           }
+        </script>
+    </body>
+</html>
